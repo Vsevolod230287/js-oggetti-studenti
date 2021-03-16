@@ -50,6 +50,14 @@ for (var i = 0; i < classe.length; i++) {
 
 
 // -------------------------------------------------------
+var detagli = $('.detagli')
+
+for (var i = 0; i < classe.length; i++) {
+  for (var key in classe[i]) {
+    detagli.append("<div>" + key + ":  " + classe[i][key] + "</div>");
+  }
+  detagli.append("</br>");
+}
 
 var btnInvia = $('button[name="invia"]');
 
@@ -69,12 +77,9 @@ btnInvia.click(function() {
 
   var detagli = $('.detagli')
 
-  for (var i = 0; i < classe.length; i++) {
-    for (var key in classe[i]) {
-      detagli.append("<div>" + key + ":  " + classe[i][key] + "</div>");
-    }
-
-    detagli.append("</br>");
+  for (var key in nuovoStudente) {
+    detagli.append("<div>" + key + ":  " + nuovoStudente[key] + "</div>");
   }
+  detagli.append("</br>");
 
 });

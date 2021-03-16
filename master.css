@@ -16,6 +16,29 @@ button {
   border: none;
 }
 
-.array-oggetti {
-  padding-top: 30px;
+.classe {
+  padding-left: 117px;
+  display: inline-block;
+  width: 50%;
+}
+
+.inputUtente {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.detagli {
+  padding-left: 50px;
+  display: inline-block;
+  width: 50%;
+}
+
+.sarti {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
 }
