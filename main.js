@@ -50,7 +50,7 @@ var divArrayOgetti = $('.array-oggetti');
 for (var i = 0; i < arrayOggetti.length; i++) {
   for (var key in arrayOggetti[i]) {
     console.log(arrayOggetti[i][key]);
-     divArrayOgetti.append("</div>" + arrayOggetti[i][key] + "<div>")
+     divArrayOgetti.append("<div>" + arrayOggetti[i][key] + "</div>")
 
   }
 }
