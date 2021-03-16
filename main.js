@@ -2,12 +2,12 @@
 // con le seguenti proprietà: nome, cognome e età.
 //  Stampare a schermo attraverso un ciclo for-in
 // tutte le proprietà dell'oggetto.
-
+//
 //   Creare un array di oggetti di studenti.
-
+//
 // Ciclare su tutti gli studenti e stampare
 //    per ognuno di essi, nome e cognome.
-
+//
 // Dare la possibilità all’utente,
 //     attraverso 3 prompt(),
 //  di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
@@ -39,15 +39,15 @@ var classe = [{
   }
 ];
 // ----------------------------------------
-var divArrayOgetti = $('.array-oggetti');
+var divClasse = $('.classe');
 
 for (var i = 0; i < classe.length; i++) {
-  for (var key in classe[i]) {
-    // console.log(classe[i][key]);
-    divArrayOgetti.append("<div>" + key + ": " + classe[i][key] + "</div>")
+  divClasse.append("<div>Nome:  " + classe[i]['nome'] + "</div>");
+  divClasse.append("<div>Cognome:  " + classe[i]['cognome'] + "</div>");
+  divClasse.append("</br>");
 
-  }
 }
+
 
 // -------------------------------------------------------
 
@@ -64,7 +64,17 @@ btnInvia.click(function() {
     cognome: cognome,
     anni: anni
   };
-classe.push(nuovoStudente);
 
-console.log(classe);
+  classe.push(nuovoStudente);
+
+  var detagli = $('.detagli')
+
+  for (var i = 0; i < classe.length; i++) {
+    for (var key in classe[i]) {
+      detagli.append("<div>" + key + ":  " + classe[i][key] + "</div>");
+    }
+
+    detagli.append("</br>");
+  }
+
 });
