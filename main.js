@@ -11,27 +11,21 @@
 // Dare la possibilità all’utente,
 //     attraverso 3 prompt(),
 //  di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
-
 var studente = {
   nome: "Vsevolod",
   cognome: "Cerneavschi",
   anni: 34,
 }
 
-var nome = $('#nome');
-var cognome = $('#cognome');
-var anni = $('#anni');
-
 for (var key in studente) {
   $('.studente').append(" " + studente[key]);
 }
+
 // ----------------------------------------------------
-var arrayOggetti = [
-  {
+var classe = [{
     nome: "Vsevolod",
     cognome: "Cerneavschi",
     anni: 34,
-
   },
   {
     nome: "Ernesto",
@@ -43,14 +37,34 @@ var arrayOggetti = [
     cognome: "Stolnici",
     anni: 35,
   }
-]
-
+];
+// ----------------------------------------
 var divArrayOgetti = $('.array-oggetti');
 
-for (var i = 0; i < arrayOggetti.length; i++) {
-  for (var key in arrayOggetti[i]) {
-    console.log(arrayOggetti[i][key]);
-     divArrayOgetti.append("<div>" + arrayOggetti[i][key] + "</div>")
+for (var i = 0; i < classe.length; i++) {
+  for (var key in classe[i]) {
+    // console.log(classe[i][key]);
+    divArrayOgetti.append("<div>" + key + ": " + classe[i][key] + "</div>")
 
   }
 }
+
+// -------------------------------------------------------
+
+var btnInvia = $('button[name="invia"]');
+
+btnInvia.click(function() {
+  var nome = $('input[name="nome"]').val();
+  var cognome = $('input[name="cognome"]').val();
+  var anni = $('input[name="anni"]').val();
+
+
+  var nuovoStudente = {
+    nome: nome,
+    cognome: cognome,
+    anni: anni
+  };
+classe.push(nuovoStudente);
+
+console.log(classe);
+});

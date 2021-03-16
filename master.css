@@ -8,3 +8,14 @@ body {
   background: black;
   color: white;
 }
+
+button {
+  background: lightblue;
+  padding: 2px 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.array-oggetti {
+  padding-top: 30px;
+}
